@@ -1,0 +1,15 @@
+Before Running this application need to start the kafka and zookeeper in your local.
+	Command for kafka start:need to run the below command under kafka directory
+		bin/kafka-server-start.sh /Users/sudhakarrachamalla/Documents/softwares/Kafka_related/kafka_2.11-2.1.0/config/server.properties
+	Command for Zookeeper start:need to run the below command under zookeeper bin location
+		./zkServer.sh
+Create the Topic (test) using the below command
+	kafka-console-producer.bat --broker-list localhost:9092 --topic test
+Need to install the mongo db in local and provide the connection details in SpringMongoConfig class as below.
+	MongoTemplate mongoTemplate = new MongoTemplate(new MongoClient("localhost", 27017),"myDb");
+Run this application in eclipse
+Create the producer using the below command
+	kafka-console-producer.bat --broker-list localhost:9092 --topic test
+Then post the employee json message in producer window like below
+	{"empId":"12","empName":"se","empSal":"12"}
+
